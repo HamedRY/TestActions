@@ -2,6 +2,7 @@ from pymongo import MongoClient
 from bson.objectid import ObjectId
 import unittest
 import json
+import pytest
 
 _mongo_client = MongoClient('mongodb://localhost:27017', connect=False)
 _skynet_db = _mongo_client['Skynet']
@@ -10,9 +11,8 @@ _revenyou_db = _mongo_client['revenyou']
 def get_some_stuff():
     return list(_revenyou_db.sign_up.find({}).limit(1))
 
-
 class CustomerTests(unittest.TestCase):
-    def test_get_some_stuff_mutation_0(self):
+    def test_get_some_stuff(self):
         result = get_some_stuff()
         self.assertEqual(result, [{
             "_id" : ObjectId("5e8e17f4e19ede2b232af5f4"),
