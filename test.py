@@ -12,7 +12,7 @@ def get_some_stuff():
 
 
 class CustomerTests(unittest.TestCase):
-    def test_TASK_NAME_mutation_TEST_NUMBER(self):
+    def test_get_some_stuff_mutation_0(self):
         result = get_some_stuff()
         self.assertEqual(result, [{
             "_id" : ObjectId("5e8e17f4e19ede2b232af5f4"),
