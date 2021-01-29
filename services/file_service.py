@@ -1,5 +1,6 @@
 import json
 import requests
+import os
 from celery import Celery
 import sys
 sys.path.extend(['..', 'tests'])
