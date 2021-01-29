@@ -1,0 +1,5 @@
+    def test_TASK_NAME_mutation_TEST_NUMBER(self):
+        task = SERVICE_NAME_service.TASK_NAME.s(
+            TASK_PARAMETERS
+        ).apply()
+        self.assertEqual(task.result, TASK_RETURN)
