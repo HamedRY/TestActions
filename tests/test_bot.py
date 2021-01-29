@@ -7,8 +7,8 @@ os.environ['APP_RUN_ENV'] = 'development'
 from services import bot_service
 
 class BotTests(unittest.TestCase):
-    def __init__(self):
-        pass
+    # def __init__(self):
+    #     pass
     def test_get_articles_mutation_0(self):
         task = bot_service.get_articles.s(
             20, 0, 'article', 'desc', None, None

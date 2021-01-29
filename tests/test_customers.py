@@ -7,8 +7,8 @@ os.environ['APP_RUN_ENV'] = 'development'
 from services import customers_service
 
 class CustomerTests(unittest.TestCase):
-    def __init__(self):
-        pass
+    # def __init__(self):
+    #     pass
     def test_get_geographic_customer_count_mutation_0(self):
         task = customers_service.get_geographic_customer_count.s(
             

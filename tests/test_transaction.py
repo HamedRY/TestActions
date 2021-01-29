@@ -7,8 +7,8 @@ os.environ['APP_RUN_ENV'] = 'development'
 from services import transaction_service
 
 class TransacrionTests(unittest.TestCase):
-    def __init__(self):
-        pass
+    # def __init__(self):
+    #     pass
     def test_get_funded_accounts_mutation_0(self):
         task = transaction_service.get_funded_accounts.s(
             1611874800, None

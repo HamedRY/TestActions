@@ -7,8 +7,8 @@ os.environ['APP_RUN_ENV'] = 'development'
 from services import authentication_service
 
 class AuthenticationTests(unittest.TestCase):
-    def __init__(self):
-        pass
+    # def __init__(self):
+    #     pass
     def test_login_mutation_0(self):
         task = authentication_service.login.s(
             'admin', 'admin', '128950'

@@ -7,8 +7,8 @@ os.environ['APP_RUN_ENV'] = 'development'
 from services import diagnostics_service
 
 class DiagnosticsTests(unittest.TestCase):
-    def __init__(self):
-        pass
+    # def __init__(self):
+    #     pass
     def test_get_diagnostics_mutation_0(self):
         task = diagnostics_service.get_diagnostics.s(
             None, None

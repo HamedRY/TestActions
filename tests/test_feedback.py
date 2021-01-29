@@ -7,8 +7,8 @@ os.environ['APP_RUN_ENV'] = 'development'
 from services import feedback_service
 
 class FeedbackTests(unittest.TestCase):
-    def __init__(self):
-        pass
+    # def __init__(self):
+    #     pass
     def test_get_feedbacks_mutation_0(self):
         task = feedback_service.get_feedbacks.s(
             20, 0, 'version', 'desc', None

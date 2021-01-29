@@ -7,8 +7,8 @@ os.environ['APP_RUN_ENV'] = 'development'
 from services import strategies_service
 
 class StrategiesTests(unittest.TestCase):
-    def __init__(self):
-        pass
+    # def __init__(self):
+    #     pass
     def test_get_strategies_mutation_0(self):
         task = strategies_service.get_strategies.s(
             20, 0, 'date_added', 'desc', None, None, None, None
