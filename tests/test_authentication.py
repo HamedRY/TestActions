@@ -37,13 +37,13 @@ class AuthenticationTests(unittest.TestCase):
         task = authentication_service.modify_user.s(
             '5f3d7f0e3fec790b6e79ed81', ['ADMIN', 'READ', 'WRITE', 'DELETE'], 'ADMIN'
         ).apply()
-        self.assertEqual(task.result, null)
+        self.assertEqual(task.result, None)
 
     def test_modify_user_mutation_1(self):
         task = authentication_service.modify_user.s(
             '5f3d7f0e3fec790b6e79ed81', ['ADMIN', 'READ', 'WRITE', 'DELETE'], 'ADMIN'
         ).apply()
-        self.assertEqual(task.result, null)
+        self.assertEqual(task.result, None)
 
     def test_get_users_mutation_2(self):
         task = authentication_service.get_users.s(
@@ -67,7 +67,7 @@ class AuthenticationTests(unittest.TestCase):
         task = authentication_service.create_user.s(
             'ADDDED', 'new@Notebook2017', 'SUPPORT', ['READ']
         ).apply()
-        self.assertEqual(task.result, null)
+        self.assertEqual(task.result, None)
 
     def test_get_users_mutation_4(self):
         task = authentication_service.get_users.s(
