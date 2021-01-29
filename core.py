@@ -1212,22 +1212,22 @@ def import_bot_description():
 
     return response
 
-@_core.route('/v2/api/bot', methods=['GET'])
-@cross_origin(origin=_allowed_origin, headers=['Content- Type', 'Authorization'])
-@jwt_required
-@permission_required(['READ'])
-@_cache.cached(timeout=_default_cache_timeout)
-def get_bots():
-    try:
-        bots = _task_manager.get_bots(request.args.get(time, 'alltime'))
-    except LookupError as le:
-        raise InvalidUsage(code=422, payload=str(le))
-    except OSError as oe:
-        raise InvalidUsage(code=503, payload=str(oe))
-    except Exception as e:
-        raise InvalidUsage(code=500, payload=str(e))
+# @_core.route('/v2/api/bot', methods=['GET'])
+# @cross_origin(origin=_allowed_origin, headers=['Content- Type', 'Authorization'])
+# @jwt_required
+# @permission_required(['READ'])
+# @_cache.cached(timeout=_default_cache_timeout)
+# def get_bots():
+#     try:
+#         bots = _task_manager.get_bots(request.args.get(time, 'alltime'))
+#     except LookupError as le:
+#         raise InvalidUsage(code=422, payload=str(le))
+#     except OSError as oe:
+#         raise InvalidUsage(code=503, payload=str(oe))
+#     except Exception as e:
+#         raise InvalidUsage(code=500, payload=str(e))
 
-    return bots
+#     return bots
 
 
 @_core.route('/v2/api/bot/<bot_id>', methods=['GET'])
@@ -1267,22 +1267,22 @@ def get_bot_subscrtiptios(bot_id):
     return subscriptions
 
 
-@_core.route('/v2/api/bot/creators', methods=['GET'])
-@cross_origin(origin=_allowed_origin, headers=['Content- Type', 'Authorization'])
-@jwt_required
-@permission_required(['READ'])
-@_cache.cached(timeout=_default_cache_timeout, query_string=True)
-def get_creators():
-    try:
-        creators = _task_manager.get_creators(request.args.get(time, 'alltime'))
-    except LookupError as le:
-        raise InvalidUsage(code=422, payload=str(le))
-    except OSError as oe:
-        raise InvalidUsage(code=503, payload=str(oe))
-    except Exception as e:
-        raise InvalidUsage(code=500, payload=str(e))
+# @_core.route('/v2/api/bot/creators', methods=['GET'])
+# @cross_origin(origin=_allowed_origin, headers=['Content- Type', 'Authorization'])
+# @jwt_required
+# @permission_required(['READ'])
+# @_cache.cached(timeout=_default_cache_timeout, query_string=True)
+# def get_creators():
+#     try:
+#         creators = _task_manager.get_creators(request.args.get(time, 'alltime'))
+#     except LookupError as le:
+#         raise InvalidUsage(code=422, payload=str(le))
+#     except OSError as oe:
+#         raise InvalidUsage(code=503, payload=str(oe))
+#     except Exception as e:
+#         raise InvalidUsage(code=500, payload=str(e))
 
-    return creators
+#     return creators
 
 
 @_core.route('/v2/api/bot/assets_growth', methods=['GET'])

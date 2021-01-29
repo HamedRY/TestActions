@@ -56,22 +56,22 @@ class TaskManager:
         return parameter_pack(
             token=token, swiftdil_id=customer_id, state=state).get()
 
-    def get_first_deposits(self, begin_year=None, begin_month=None):
-        parameter_pack = lambda token, **args:\
-            customers_service.get_first_deposits.apply_async(
-                args=(args,), queue='customers')
+    # def get_first_deposits(self, begin_year=None, begin_month=None):
+    #     parameter_pack = lambda token, **args:\
+    #         customers_service.get_first_deposits.apply_async(
+    #             args=(args,), queue='customers')
 
-        if begin_year and begin_month:
-            begin = datetime(year=begin_year, month=begin_month, day=1)
-            end = datetime.now().replace(
-                day=calendar.monthrange(begin.year, begin.month)[1],
-                hour=0, minute=0, second=0, microsecond=0)
-        else:
-            begin = datetime.now().replace(hour=0, minute=0, second=0, microsecond=0)
-            end = begin + dateutil.relativedelta.relativedelta(months=-1)
+    #     if begin_year and begin_month:
+    #         begin = datetime(year=begin_year, month=begin_month, day=1)
+    #         end = datetime.now().replace(
+    #             day=calendar.monthrange(begin.year, begin.month)[1],
+    #             hour=0, minute=0, second=0, microsecond=0)
+    #     else:
+    #         begin = datetime.now().replace(hour=0, minute=0, second=0, microsecond=0)
+    #         end = begin + dateutil.relativedelta.relativedelta(months=-1)
 
-        return parameter_pack(
-            startDate=begin.timestamp(), endDate=end.timestamp()).get()
+    #     return parameter_pack(
+    #         startDate=begin.timestamp(), endDate=end.timestamp()).get()
 
     def get_screening_count(self, status='DONE', scope=None):
         parameter_pack = lambda **args:\
