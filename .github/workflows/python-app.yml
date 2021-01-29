@@ -41,5 +41,7 @@ jobs:
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
         # python inserter.py
     - name: Test with pytest
+      env:
+          APP_RUN_ENV: development
       run: |
         pytest
