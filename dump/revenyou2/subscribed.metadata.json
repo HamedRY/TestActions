@@ -1,0 +1,1 @@
+{"options":{},"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_","ns":"revenyou2.subscribed"}],"uuid":"d72eae0f9d764b12bba6bf2741027356"}

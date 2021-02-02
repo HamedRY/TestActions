@@ -7,7 +7,12 @@ os.environ['APP_RUN_ENV'] = 'development'
 from services import analytics_service
 
 class AnalyticsTests(unittest.TestCase):
-    def __init__(self):
-        pass
+    _ = None
+    def test_daily_new_deposit_aggregator_mutation_0(self):
+        task = analytics_service.daily_new_deposit_aggregator.s(
+            
+        ).apply()
+        self.assertEqual(task.result, null)
+
 if __name__ == '__main__':
     unittest.main(verbosity=2)

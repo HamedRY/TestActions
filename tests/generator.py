@@ -38,7 +38,9 @@ class TestGenerator:
         test = TestGenerator._template
         for r in (
             ('SERVICE_NAME', self.service), ('TASK_NAME', tname_), 
-            ('TASK_PARAMETERS', tparams_), ('TASK_RETURN', treturn_.replace('true', 'True').replace('false', 'False')), 
+            ('TASK_PARAMETERS', tparams_), ('TASK_RETURN', treturn_.\
+                replace('true', 'True').replace('false', 'False').\
+                replace('task.result, null', 'task.result, None')), 
             ('TEST_NUMBER', str(num))):
             test = test.replace(*r)
         self.existing_tests[tname_] = num

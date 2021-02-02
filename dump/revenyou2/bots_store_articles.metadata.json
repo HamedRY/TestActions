@@ -1,0 +1,1 @@
+{"options":{},"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_","ns":"revenyou2.bots_store_articles"}],"uuid":"db19b18af6764d7481bc5fa0de33e8b9"}

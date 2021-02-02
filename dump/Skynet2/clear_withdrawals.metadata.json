@@ -1,0 +1,1 @@
+{"options":{},"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_","ns":"Skynet2.clear_withdrawals"}],"uuid":"d5ed5cecb5d0499f862c8e51d3bf6b2d"}

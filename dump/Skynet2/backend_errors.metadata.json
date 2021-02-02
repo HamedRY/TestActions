@@ -1,0 +1,1 @@
+{"options":{},"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_","ns":"Skynet2.backend_errors"}],"uuid":"019140b794714fe690d3aa474ace55c4"}

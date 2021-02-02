@@ -1,0 +1,1 @@
+{"options":{},"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_","ns":"Skynet2.first_deposit"}],"uuid":"f4cf51fac87646219b30cc0b8c9394c4"}

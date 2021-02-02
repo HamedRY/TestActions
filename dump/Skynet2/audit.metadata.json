@@ -1,0 +1,1 @@
+{"options":{},"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_","ns":"Skynet2.audit"}],"uuid":"8a52791485d14c5bb160716686bae7f6"}
