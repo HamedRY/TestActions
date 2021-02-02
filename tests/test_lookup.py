@@ -12,43 +12,43 @@ class LookupTests(unittest.TestCase):
         task = lookup_service.get_withdrawal_deposit_lookup.s(
             
         ).apply()
-        self.assertEqual(task.result, null)
+        self.assertEqual(task.result, None)
 
     def test_get_deposit_withdrawal_lookup_mutation_0(self):
         task = lookup_service.get_deposit_withdrawal_lookup.s(
             
         ).apply()
-        self.assertEqual(task.result, null)
+        self.assertEqual(task.result, None)
 
     def test_get_deposit_withdrawal_lookup_mutation_0(self):
         task = lookup_service.get_deposit_withdrawal_lookup.s(
             
         ).apply()
-        self.assertEqual(task.result, null)
+        self.assertEqual(task.result, None)
 
     def test_get_withdrawal_deposit_lookup_mutation_0(self):
         task = lookup_service.get_withdrawal_deposit_lookup.s(
             
         ).apply()
-        self.assertEqual(task.result, null)
+        self.assertEqual(task.result, None)
 
     def test_get_withdrawal_deposit_lookup_mutation_1(self):
         task = lookup_service.get_withdrawal_deposit_lookup.s(
             
         ).apply()
-        self.assertEqual(task.result, null)
+        self.assertEqual(task.result, None)
 
     def test_get_deposit_withdrawal_lookup_mutation_1(self):
         task = lookup_service.get_deposit_withdrawal_lookup.s(
             
         ).apply()
-        self.assertEqual(task.result, null)
+        self.assertEqual(task.result, None)
 
     def test_get_withdrawal_deposit_lookup_mutation_1(self):
         task = lookup_service.get_withdrawal_deposit_lookup.s(
             
         ).apply()
-        self.assertEqual(task.result, null)
+        self.assertEqual(task.result, None)
 
 if __name__ == '__main__':
     unittest.main(verbosity=2)

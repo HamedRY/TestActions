@@ -66,13 +66,13 @@ class AuthenticationTests(unittest.TestCase):
         task = authentication_service.delete_user.s(
             '60191b47f6dcc40402a4568e'
         ).apply()
-        self.assertEqual(task.result, null)
+        self.assertEqual(task.result, None)
 
     def test_delete_user_mutation_1(self):
         task = authentication_service.delete_user.s(
             '60191b47f6dcc40402a4568e'
         ).apply()
-        self.assertEqual(task.result, null)
+        self.assertEqual(task.result, None)
 
     def test_get_users_mutation_6(self):
         task = authentication_service.get_users.s(

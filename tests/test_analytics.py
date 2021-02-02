@@ -12,7 +12,7 @@ class AnalyticsTests(unittest.TestCase):
         task = analytics_service.daily_new_deposit_aggregator.s(
             
         ).apply()
-        self.assertEqual(task.result, null)
+        self.assertEqual(task.result, None)
 
 if __name__ == '__main__':
     unittest.main(verbosity=2)
