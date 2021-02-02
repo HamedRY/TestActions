@@ -20,10 +20,13 @@ jobs:
       uses: supercharge/mongodb-github-action@1.3.0
       with:
         mongodb-version: 4.4
+    - name: Start Redis
+      run: |
+        docker run -d -p 6379:6379 redis
     - name: Restore DB
       run: |
-        mongorestore -d Skynet dump/Skynet/
-        mongorestore -d revenyou dump/revenyou/
+        mongorestore -d Skynet dump/Skynet2/
+        mongorestore -d revenyou dump/revenyou2/
     - name: Set up Python 3.8
       uses: actions/setup-python@v2
       with:
