@@ -1,1 +1,0 @@
-{"options":{},"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_","ns":"Skynet.api"}],"uuid":"e4261ee076204279a3d85f1553f102a6"}
