@@ -7,6 +7,7 @@ os.environ['APP_RUN_ENV'] = 'development'
 from services import customers_service
 
 class CustomerTests(unittest.TestCase):
+    maxDiff = None
     _ = None
     def test_get_periodical_customer_count_mutation_0(self):
         task = customers_service.get_periodical_customer_count.s(
