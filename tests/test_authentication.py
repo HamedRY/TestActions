@@ -26,41 +26,41 @@ class AuthenticationTests(unittest.TestCase):
         ).apply()
         self.assertEqual(task.result, {"content": [{"_id": "5ee7918979bb276948910fd3", "username": "ADMIN", "permissions": ["READ", "WRITE", "ADMIN", "DELETE"], "role": "ADMIN"}, {"_id": "5f16a7bbb9ec781a4d85226a", "username": "MARKETING", "permissions": ["READ", "DELETE", "WRITE"], "role": "MARKETING"}, {"_id": "5f4785ab1c1ac908507639a6", "username": "SUPPORT", "permissions": ["READ"], "role": "SUPPORT"}, {"_id": "5f6c57b2abc917c039dcf0d6", "username": "OTHER", "role": "OTHER", "permissions": ["READ", "WRITE"]}, {"_id": "6006c24557bc03c3ebc96574", "username": "MAINTAINER", "role": "MAINTAINER", "permissions": ["READ", "WRITE", "DELETE", "ADMIN"]}]})
 
-    def test_create_user_mutation_0(self):
-        task = authentication_service.create_user.s(
-            'mamad', 'new@Notebook2017', 'SUPPORT', ['READ', 'WRITE', 'DELETE']
-        ).apply()
-        self.assertEqual(task.result, "MAMAD")
+    # def test_create_user_mutation_0(self):
+    #     task = authentication_service.create_user.s(
+    #         'mamad', 'new@Notebook2017', 'SUPPORT', ['READ', 'WRITE', 'DELETE']
+    #     ).apply()
+    #     self.assertEqual(task.result, "MAMAD")
 
-    def test_create_user_mutation_0(self):
-        task = authentication_service.create_user.s(
-            'mamad', 'new@Notebook2017', 'SUPPORT', ['READ', 'WRITE', 'DELETE']
-        ).apply()
-        self.assertEqual(task.result, "MAMAD")
+    # def test_create_user_mutation_0(self):
+    #     task = authentication_service.create_user.s(
+    #         'mamad', 'new@Notebook2017', 'SUPPORT', ['READ', 'WRITE', 'DELETE']
+    #     ).apply()
+    #     self.assertEqual(task.result, "MAMAD")
 
     def test_get_users_mutation_2(self):
         task = authentication_service.get_users.s(
             
         ).apply()
-        self.assertEqual(task.result, {"content": [{"_id": "5ee7918979bb276948910fd3", "username": "ADMIN", "permissions": ["READ", "WRITE", "ADMIN", "DELETE"], "role": "ADMIN"}, {"_id": "5f16a7bbb9ec781a4d85226a", "username": "MARKETING", "permissions": ["READ", "DELETE", "WRITE"], "role": "MARKETING"}, {"_id": "5f4785ab1c1ac908507639a6", "username": "SUPPORT", "permissions": ["READ"], "role": "SUPPORT"}, {"_id": "5f6c57b2abc917c039dcf0d6", "username": "OTHER", "role": "OTHER", "permissions": ["READ", "WRITE"]}, {"_id": "6006c24557bc03c3ebc96574", "username": "MAINTAINER", "role": "MAINTAINER", "permissions": ["READ", "WRITE", "DELETE", "ADMIN"]}, {"_id": "60191b47f7fa5d0767a4568e", "username": "MAMAD", "role": "SUPPORT", "permissions": ["READ", "WRITE", "DELETE"]}, {"_id": "60191b47f6dcc40402a4568e", "username": "MAMAD", "role": "SUPPORT", "permissions": ["READ", "WRITE", "DELETE"]}]})
+        self.assertEqual(task.result, {"content": [{"_id": "5ee7918979bb276948910fd3", "username": "ADMIN", "permissions": ["READ", "WRITE", "ADMIN", "DELETE"], "role": "ADMIN"}, {"_id": "5f16a7bbb9ec781a4d85226a", "username": "MARKETING", "permissions": ["READ", "DELETE", "WRITE"], "role": "MARKETING"}, {"_id": "5f4785ab1c1ac908507639a6", "username": "SUPPORT", "permissions": ["READ"], "role": "SUPPORT"}, {"_id": "5f6c57b2abc917c039dcf0d6", "username": "OTHER", "role": "OTHER", "permissions": ["READ", "WRITE"]}, {"_id": "6006c24557bc03c3ebc96574", "username": "MAINTAINER", "role": "MAINTAINER", "permissions": ["READ", "WRITE", "DELETE", "ADMIN"]}]})
 
     def test_get_users_mutation_3(self):
         task = authentication_service.get_users.s(
             
         ).apply()
-        self.assertEqual(task.result, {"content": [{"_id": "5ee7918979bb276948910fd3", "username": "ADMIN", "permissions": ["READ", "WRITE", "ADMIN", "DELETE"], "role": "ADMIN"}, {"_id": "5f16a7bbb9ec781a4d85226a", "username": "MARKETING", "permissions": ["READ", "DELETE", "WRITE"], "role": "MARKETING"}, {"_id": "5f4785ab1c1ac908507639a6", "username": "SUPPORT", "permissions": ["READ"], "role": "SUPPORT"}, {"_id": "5f6c57b2abc917c039dcf0d6", "username": "OTHER", "role": "OTHER", "permissions": ["READ", "WRITE"]}, {"_id": "6006c24557bc03c3ebc96574", "username": "MAINTAINER", "role": "MAINTAINER", "permissions": ["READ", "WRITE", "DELETE", "ADMIN"]}, {"_id": "60191b47f7fa5d0767a4568e", "username": "MAMAD", "role": "SUPPORT", "permissions": ["READ", "WRITE", "DELETE"]}, {"_id": "60191b47f6dcc40402a4568e", "username": "MAMAD", "role": "SUPPORT", "permissions": ["READ", "WRITE", "DELETE"]}]})
+        self.assertEqual(task.result, {"content": [{"_id": "5ee7918979bb276948910fd3", "username": "ADMIN", "permissions": ["READ", "WRITE", "ADMIN", "DELETE"], "role": "ADMIN"}, {"_id": "5f16a7bbb9ec781a4d85226a", "username": "MARKETING", "permissions": ["READ", "DELETE", "WRITE"], "role": "MARKETING"}, {"_id": "5f4785ab1c1ac908507639a6", "username": "SUPPORT", "permissions": ["READ"], "role": "SUPPORT"}, {"_id": "5f6c57b2abc917c039dcf0d6", "username": "OTHER", "role": "OTHER", "permissions": ["READ", "WRITE"]}, {"_id": "6006c24557bc03c3ebc96574", "username": "MAINTAINER", "role": "MAINTAINER", "permissions": ["READ", "WRITE", "DELETE", "ADMIN"]}]})
 
     def test_get_users_mutation_4(self):
         task = authentication_service.get_users.s(
             
         ).apply()
-        self.assertEqual(task.result, {"content": [{"_id": "5ee7918979bb276948910fd3", "username": "ADMIN", "permissions": ["READ", "WRITE", "ADMIN", "DELETE"], "role": "ADMIN"}, {"_id": "5f16a7bbb9ec781a4d85226a", "username": "MARKETING", "permissions": ["READ", "DELETE", "WRITE"], "role": "MARKETING"}, {"_id": "5f4785ab1c1ac908507639a6", "username": "SUPPORT", "permissions": ["READ"], "role": "SUPPORT"}, {"_id": "5f6c57b2abc917c039dcf0d6", "username": "OTHER", "role": "OTHER", "permissions": ["READ", "WRITE"]}, {"_id": "6006c24557bc03c3ebc96574", "username": "MAINTAINER", "role": "MAINTAINER", "permissions": ["READ", "WRITE", "DELETE", "ADMIN"]}, {"_id": "60191b47f7fa5d0767a4568e", "username": "MAMAD", "role": "SUPPORT", "permissions": ["READ", "WRITE", "DELETE"]}, {"_id": "60191b47f6dcc40402a4568e", "username": "MAMAD", "role": "SUPPORT", "permissions": ["READ", "WRITE", "DELETE"]}]})
+        self.assertEqual(task.result, {"content": [{"_id": "5ee7918979bb276948910fd3", "username": "ADMIN", "permissions": ["READ", "WRITE", "ADMIN", "DELETE"], "role": "ADMIN"}, {"_id": "5f16a7bbb9ec781a4d85226a", "username": "MARKETING", "permissions": ["READ", "DELETE", "WRITE"], "role": "MARKETING"}, {"_id": "5f4785ab1c1ac908507639a6", "username": "SUPPORT", "permissions": ["READ"], "role": "SUPPORT"}, {"_id": "5f6c57b2abc917c039dcf0d6", "username": "OTHER", "role": "OTHER", "permissions": ["READ", "WRITE"]}, {"_id": "6006c24557bc03c3ebc96574", "username": "MAINTAINER", "role": "MAINTAINER", "permissions": ["READ", "WRITE", "DELETE", "ADMIN"]}]})
 
     def test_get_users_mutation_5(self):
         task = authentication_service.get_users.s(
             
         ).apply()
-        self.assertEqual(task.result, {"content": [{"_id": "5ee7918979bb276948910fd3", "username": "ADMIN", "permissions": ["READ", "WRITE", "ADMIN", "DELETE"], "role": "ADMIN"}, {"_id": "5f16a7bbb9ec781a4d85226a", "username": "MARKETING", "permissions": ["READ", "DELETE", "WRITE"], "role": "MARKETING"}, {"_id": "5f4785ab1c1ac908507639a6", "username": "SUPPORT", "permissions": ["READ"], "role": "SUPPORT"}, {"_id": "5f6c57b2abc917c039dcf0d6", "username": "OTHER", "role": "OTHER", "permissions": ["READ", "WRITE"]}, {"_id": "6006c24557bc03c3ebc96574", "username": "MAINTAINER", "role": "MAINTAINER", "permissions": ["READ", "WRITE", "DELETE", "ADMIN"]}, {"_id": "60191b47f7fa5d0767a4568e", "username": "MAMAD", "role": "SUPPORT", "permissions": ["READ", "WRITE", "DELETE"]}, {"_id": "60191b47f6dcc40402a4568e", "username": "MAMAD", "role": "SUPPORT", "permissions": ["READ", "WRITE", "DELETE"]}]})
+        self.assertEqual(task.result, {"content": [{"_id": "5ee7918979bb276948910fd3", "username": "ADMIN", "permissions": ["READ", "WRITE", "ADMIN", "DELETE"], "role": "ADMIN"}, {"_id": "5f16a7bbb9ec781a4d85226a", "username": "MARKETING", "permissions": ["READ", "DELETE", "WRITE"], "role": "MARKETING"}, {"_id": "5f4785ab1c1ac908507639a6", "username": "SUPPORT", "permissions": ["READ"], "role": "SUPPORT"}, {"_id": "5f6c57b2abc917c039dcf0d6", "username": "OTHER", "role": "OTHER", "permissions": ["READ", "WRITE"]}, {"_id": "6006c24557bc03c3ebc96574", "username": "MAINTAINER", "role": "MAINTAINER", "permissions": ["READ", "WRITE", "DELETE", "ADMIN"]}]})
 
     def test_delete_user_mutation_0(self):
         task = authentication_service.delete_user.s(
@@ -78,13 +78,13 @@ class AuthenticationTests(unittest.TestCase):
         task = authentication_service.get_users.s(
             
         ).apply()
-        self.assertEqual(task.result, {"content": [{"_id": "5ee7918979bb276948910fd3", "username": "ADMIN", "permissions": ["READ", "WRITE", "ADMIN", "DELETE"], "role": "ADMIN"}, {"_id": "5f16a7bbb9ec781a4d85226a", "username": "MARKETING", "permissions": ["READ", "DELETE", "WRITE"], "role": "MARKETING"}, {"_id": "5f4785ab1c1ac908507639a6", "username": "SUPPORT", "permissions": ["READ"], "role": "SUPPORT"}, {"_id": "5f6c57b2abc917c039dcf0d6", "username": "OTHER", "role": "OTHER", "permissions": ["READ", "WRITE"]}, {"_id": "6006c24557bc03c3ebc96574", "username": "MAINTAINER", "role": "MAINTAINER", "permissions": ["READ", "WRITE", "DELETE", "ADMIN"]}, {"_id": "60191b47f7fa5d0767a4568e", "username": "MAMAD", "role": "SUPPORT", "permissions": ["READ", "WRITE", "DELETE"]}]})
+        self.assertEqual(task.result, {"content": [{"_id": "5ee7918979bb276948910fd3", "username": "ADMIN", "permissions": ["READ", "WRITE", "ADMIN", "DELETE"], "role": "ADMIN"}, {"_id": "5f16a7bbb9ec781a4d85226a", "username": "MARKETING", "permissions": ["READ", "DELETE", "WRITE"], "role": "MARKETING"}, {"_id": "5f4785ab1c1ac908507639a6", "username": "SUPPORT", "permissions": ["READ"], "role": "SUPPORT"}, {"_id": "5f6c57b2abc917c039dcf0d6", "username": "OTHER", "role": "OTHER", "permissions": ["READ", "WRITE"]}, {"_id": "6006c24557bc03c3ebc96574", "username": "MAINTAINER", "role": "MAINTAINER", "permissions": ["READ", "WRITE", "DELETE", "ADMIN"]}, ]})
 
     def test_get_users_mutation_7(self):
         task = authentication_service.get_users.s(
             
         ).apply()
-        self.assertEqual(task.result, {"content": [{"_id": "5ee7918979bb276948910fd3", "username": "ADMIN", "permissions": ["READ", "WRITE", "ADMIN", "DELETE"], "role": "ADMIN"}, {"_id": "5f16a7bbb9ec781a4d85226a", "username": "MARKETING", "permissions": ["READ", "DELETE", "WRITE"], "role": "MARKETING"}, {"_id": "5f4785ab1c1ac908507639a6", "username": "SUPPORT", "permissions": ["READ"], "role": "SUPPORT"}, {"_id": "5f6c57b2abc917c039dcf0d6", "username": "OTHER", "role": "OTHER", "permissions": ["READ", "WRITE"]}, {"_id": "6006c24557bc03c3ebc96574", "username": "MAINTAINER", "role": "MAINTAINER", "permissions": ["READ", "WRITE", "DELETE", "ADMIN"]}, {"_id": "60191b47f7fa5d0767a4568e", "username": "MAMAD", "role": "SUPPORT", "permissions": ["READ", "WRITE", "DELETE"]}]})
+        self.assertEqual(task.result, {"content": [{"_id": "5ee7918979bb276948910fd3", "username": "ADMIN", "permissions": ["READ", "WRITE", "ADMIN", "DELETE"], "role": "ADMIN"}, {"_id": "5f16a7bbb9ec781a4d85226a", "username": "MARKETING", "permissions": ["READ", "DELETE", "WRITE"], "role": "MARKETING"}, {"_id": "5f4785ab1c1ac908507639a6", "username": "SUPPORT", "permissions": ["READ"], "role": "SUPPORT"}, {"_id": "5f6c57b2abc917c039dcf0d6", "username": "OTHER", "role": "OTHER", "permissions": ["READ", "WRITE"]}, {"_id": "6006c24557bc03c3ebc96574", "username": "MAINTAINER", "role": "MAINTAINER", "permissions": ["READ", "WRITE", "DELETE", "ADMIN"]}, ]})
 
     def test_login_mutation_1(self):
         task = authentication_service.login.s(
